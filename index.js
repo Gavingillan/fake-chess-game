@@ -173,13 +173,13 @@ function checkValid(source,target,piece,new_pos,old_pos){
     if (Math.abs(parseInt(source[0])-parseInt(target[0])) == 2){ //moves two up or down
       if (Math.abs(parseInt(source[1])-parseInt(target[1])) == 1){ // make sure its up/down two -> over 1
         //make sure you dont own that piece
-        if (target in old_pos){
-          old_piece = old_pos[target]
-          console.log(old_piece)
-          if (old_piece[0] == nextMove){
-            return 'snapback'
-          }
-        }
+        // if (target in old_pos){
+        //   old_piece = old_pos[target]
+        //   console.log(old_piece)
+        //   if (old_piece[0] == nextMove){
+        //     return 'snapback'
+        //   }
+        // }
       }else{
         return 'snapback'
       }
@@ -187,13 +187,13 @@ function checkValid(source,target,piece,new_pos,old_pos){
     else if(Math.abs(parseInt(source[0])-parseInt(target[0])) == 1){
       if (Math.abs(parseInt(source[1])-parseInt(target[1])) == 2){ // make sure its up/down one -> over 2
         //make sure you dont own that piece
-        if (target in old_pos){
-          old_piece = old_pos[target]
-          console.log(old_piece)
-          if (old_piece[0] == nextMove){
-            return 'snapback'
-          }
-        }
+        // if (target in old_pos){
+        //   old_piece = old_pos[target]
+        //   console.log(old_piece)
+        //   if (old_piece[0] == nextMove){
+        //     return 'snapback'
+        //   }
+        // }
       }else{
         return 'snapback'
       }
@@ -229,13 +229,13 @@ function checkValid(source,target,piece,new_pos,old_pos){
       }
       
       //make sure you dont own that piece
-      if (target in old_pos){
-        old_piece = old_pos[target]
-        console.log(old_piece)
-        if (old_piece[0] == nextMove){
-          return 'snapback'
-        }
-      }
+      // if (target in old_pos){
+      //   old_piece = old_pos[target]
+      //   console.log(old_piece)
+      //   if (old_piece[0] == nextMove){
+      //     return 'snapback'
+      //   }
+      // }
     }
     else{
       return 'snapback'
@@ -266,13 +266,13 @@ function checkValid(source,target,piece,new_pos,old_pos){
       }
       
       //make sure you dont own that piece
-      if (target in old_pos){
-        old_piece = old_pos[target]
-        console.log(old_piece)
-        if (old_piece[0] == nextMove){
-          return 'snapback'
-        }
-      }
+      // if (target in old_pos){
+      //   old_piece = old_pos[target]
+      //   console.log(old_piece)
+      //   if (old_piece[0] == nextMove){
+      //     return 'snapback'
+      //   }
+      // }
     }
     else if(source[0]-target[0]==0 && source[1]-target[1]!=0){  //row doesnt change, col does
       console.log('col changed')
@@ -286,13 +286,13 @@ function checkValid(source,target,piece,new_pos,old_pos){
       }
 
       //make sure target doesnt have a piece of the same color
-      if (target in old_pos){
-        old_piece = old_pos[target]
-        console.log(old_piece)
-        if (old_piece[0] == nextMove){
-          return 'snapback'
-        }
-      }
+      // if (target in old_pos){
+      //   old_piece = old_pos[target]
+      //   console.log(old_piece)
+      //   if (old_piece[0] == nextMove){
+      //     return 'snapback'
+      //   }
+      // }
 
     }
     else if(source[0]-target[0]!=0 && source[1]-target[1]==0){ //row changes
@@ -305,13 +305,13 @@ function checkValid(source,target,piece,new_pos,old_pos){
         }
       }
       
-      if (target in old_pos){
-        old_piece = old_pos[target]
-        console.log(old_piece)
-        if (old_piece[0] == nextMove){
-          return 'snapback'
-        }
-      }
+      // if (target in old_pos){
+      //   old_piece = old_pos[target]
+      //   console.log(old_piece)
+      //   if (old_piece[0] == nextMove){
+      //     return 'snapback'
+      //   }
+      // }
     }
     else{ //both or neither true - invalid move
       return 'snapback'
@@ -322,13 +322,13 @@ function checkValid(source,target,piece,new_pos,old_pos){
   if(pieceType == "K"){
     if(Math.abs(parseInt(target[0])-parseInt(source[0])) <= 1 && Math.abs(parseInt(target[1])-parseInt(source[1])) <= 1 && target!=source){
       //make sure you dont own that piece
-      if (target in old_pos){
-        old_piece = old_pos[target]
-        console.log(old_piece)
-        if (old_piece[0] == nextMove){
-          return 'snapback'
-        }
-      }
+      // if (target in old_pos){
+      //   old_piece = old_pos[target]
+      //   console.log(old_piece)
+      //   if (old_piece[0] == nextMove){
+      //     return 'snapback'
+      //   }
+      // }
     }
     else{
       return 'snapback'
